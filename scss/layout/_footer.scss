@@ -8,6 +8,10 @@ footer {
 .footer {
   position: relative;
   background-color: $cWeber;
+  padding-bottom: 10%;
+  .row + .row {
+    margin-top: 10em;
+  }
   &_cols {
     display: block;
     @include respond-to($vpD) {
@@ -37,11 +41,19 @@ footer {
   .heading.typeXS {
     margin-top: 0.175em;
   }
+  a {
+    color: $cStubbs;
+    @include link-active-styles {
+      text-decoration-color: $cAbernathy;
+    }
+  }
   .simple_list {
     margin-top: 1em;
     li {
       font-size: rem($typeXS);
       position: relative;
+      margin-bottom: 0.5rem;
+      line-height: 1.8;
       &:before {
         content: "";
         background-image: url(../assets/icons/source/arrowR.svg);
@@ -51,7 +63,7 @@ footer {
         width: 14px;
         position: absolute;
         left: -20px;
-        top: 7px;
+        top: 8px;
         display: block;
         z-index: 2;
       }
