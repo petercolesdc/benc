@@ -1,0 +1,60 @@
+
+$deckgap: 50px;
+
+footer {
+  @extend section;
+}
+
+.footer {
+  position: relative;
+  background-color: $cWeber;
+  &_cols {
+    display: block;
+    @include respond-to($vpD) {
+      display: grid;
+      grid-gap: $deckgap;
+      width: calc(100% - #{$deckgap*3});
+      grid-template-columns: 31% 23% 23% 23%;
+    }
+    div {
+      margin-bottom: 3em;
+      @include respond-to-min-max($vpA, $vpD) {
+        &:nth-of-type(1) {
+          width: 60%;
+          position: absolute;
+          top: -3px;
+        }
+        &:nth-of-type(n+2) {
+          width: 40%;
+          margin-left: 60%;
+        }
+      }
+      @include respond-to($vpD) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .heading.typeXS {
+    margin-top: 0.175em;
+  }
+  .simple_list {
+    margin-top: 1em;
+    li {
+      font-size: rem($typeXS);
+      position: relative;
+      &:before {
+        content: "";
+        background-image: url(../assets/icons/source/arrowR.svg);
+        background-size: contain;
+        background-position: right top;
+        height: 8px;
+        width: 14px;
+        position: absolute;
+        left: -20px;
+        top: 7px;
+        display: block;
+        z-index: 2;
+      }
+    }
+  }
+}

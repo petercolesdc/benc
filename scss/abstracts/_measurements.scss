@@ -1,0 +1,49 @@
+// General spacing options
+// ------------------------------------------------------------------
+
+$bufferSpaceS: 3em;
+$bufferSpaceM: 5em;
+
+
+// Ratios
+// ------------------------------------------------------------------
+
+$ratioWidescreen: 56.25%;
+
+
+// Buttons
+// ------------------------------------------------------------------
+
+$btnSmall:    35px;
+$btnDefault:  40px;
+$btnRadius:   3px;
+$btnPadding:  15px;
+$btnPaddingSmall: $btnPadding/1.25;
+
+
+// Misc
+// ------------------------------------------------------------------
+
+$formItem: 40px;
+$strokeWidth: 1px;
+$rowMax: 1400px;
+$borderOuter: 1.4em;
+
+
+// Viewports. Horizontal break widths
+// Use example @include respond-to(var) { }. See mixins.scss for all options
+// ------------------------------------------------------------------
+
+$vpA: 300px;
+$vpB: 670px;
+$vpC: 800px;
+$vpD: 990px;
+$vpE: 1300px;
+$vpF: 1600px;
+
+// Assign viewports to tasks
+$vpMax:           $vpF;                   // Max viewports
+$vpMin:           $vpA;
+$vpMenu:          $vpC;                   // Switch menu layout
+$vpTable:         $vpC;                   // Switch table layout
+$vpDeviceSafe:		800px;	                // Safe width for tablet type things as they can be odd

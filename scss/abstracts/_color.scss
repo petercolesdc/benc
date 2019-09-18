@@ -1,0 +1,46 @@
+
+// Brand colours
+// ------------------------------------------------------------------
+
+// Core colours
+$cAbernathy: #f25111!default;
+$cLowe: #37557D!default;
+$cFord: #c8b4a0!default;
+$cDelos: #50e2e4!default;
+
+// Greyscales
+$cStubbs: #1f1815!default;
+$cFlood: #3c3938!default;
+$cWeber: #b5aca8!default;
+$cSizemore: #f9f7f6!default;
+
+// Non-brand feedbacks
+// ------------------------------------------------------------------
+$cError: 					#B10E1E;
+$cSuccess: 				#00823B;
+$cAlert: 					#FFBF47;
+
+
+// Assign colours to declarative variables
+// ------------------------------------------------------------------
+
+// Actions
+$cAction: 				 $cAbernathy;
+$cActionRespond: 	 $cFord;
+$cActionVisited:   $cLowe;
+
+// Buttons
+$cButtonPrimary:   $cAbernathy;
+$cButtonSecondary: #fff;
+$cButtonDisabled:  $cSizemore;
+$cButtonDanger:    $cError;
+$cButtonSuccess:   $cSuccess;
+
+// Default text colors
+$cHeading: 				 $cStubbs;
+$cLabel:           $cStubbs;
+$cText: 					 $cFlood;
+
+// Misc. color assignments
+$cBorder:          $cWeber;
+$cDisabled: 			 $cSizemore;

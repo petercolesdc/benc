@@ -1,0 +1,9 @@
+
+.ui__container {
+  background-repeat: repeat;
+  background-image: url(../assets/img/texL.png);
+  padding: $borderOuter;
+  @include respond-to($vpMenu) {
+    padding: $borderOuter*2;
+  }
+}

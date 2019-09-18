@@ -1,0 +1,32 @@
+{
+  "name": "abernathy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Peter Coles",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-svg-sprite": "^1.5.0"
+  },
+  "dependencies": {
+    "gulp-pretty-url": "^0.1.1"
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 3%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

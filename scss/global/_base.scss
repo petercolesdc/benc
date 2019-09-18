@@ -1,0 +1,63 @@
+html {
+  font-size: $scaleRoot + px;
+  animation: fadeSiteIn 0.5s ease forwards;
+  @media (max-width: $vpDeviceSafe) {
+    -webkit-text-size-adjust: 100%;
+  }
+  &fadeSiteOut {
+    animation:  fadeSiteOut 0.5s ease forwards;
+  }
+}
+
+body {
+  color: $cText;
+  font-family: $fontDefault;
+  line-height: $lineheightBase;
+  overflow-x: hidden;
+}
+
+a,
+.fauxlink {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-skip: objects;
+  cursor: pointer;
+  color: $cAction;
+  @include link-active-styles {
+    text-decoration-color: darken($cAction, 35%);
+  }
+}
+
+// Overide iOS telephone styling on links
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Max with utl class
+.max_width {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Full width utl class
+.full_width {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Further sensible resets
+strong, b {
+  font-weight: $fontBold;
+	@include sharp-text;
+}
+
+input, textarea, select, button {
+  font-family: $fontDefault;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: inherit;
+}

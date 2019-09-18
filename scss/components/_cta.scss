@@ -1,0 +1,46 @@
+
+.cta {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  main {
+    flex-basis: 100%;
+    padding: 6em $bufferSpaceS;
+    text-align: center;
+    @include respond-to($vpD) {
+      padding: $bufferSpaceM;
+      flex-basis: 50%;
+      text-align: left;
+    }
+    p {
+      @extend .text;
+      margin-top: 0.5em;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      @include respond-to($vpD) {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: auto;
+        padding-right: 5%;
+      }
+    }
+    .button {
+      margin-top: 1em;
+    }
+  }
+  aside {
+    flex-basis: 50%;
+    display: none;
+    @include respond-to($vpD) {
+      flex-basis: 50%;
+      display: block;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

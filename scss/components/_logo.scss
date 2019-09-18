@@ -1,0 +1,39 @@
+
+$logoDelay: 1s;
+$logoDuration: 1s;
+
+.logo {
+  @extend .typeXL;
+  position: relative;
+  color: #fff;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  b {
+    position: relative;
+    animation: anim-logo-change-a;
+    animation-duration: $logoDuration;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: $logoDelay;
+  }
+  &:before {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    background-color: $cStubbs;
+    border-radius: 50%;
+    top: -10px;
+    left: -15px;
+    content: "";
+    height: 46px;
+    width: 46px;
+    z-index: 0;
+    animation: anim-logo-change-b;
+    animation-duration: $logoDuration/3;
+    animation-iteration-count: 1;
+    animation-delay: $logoDelay*1.5;
+    animation-fill-mode: forwards;
+  }
+}

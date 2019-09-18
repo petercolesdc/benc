@@ -1,0 +1,44 @@
+
+$deckgap: 50px;
+
+.deck {
+  position: relative;
+  &.deckby4 {
+    @include respond-to($vpMenu) {
+      display: grid;
+      width: calc(100% - #{$deckgap*2});
+      grid-gap: $deckgap;
+      grid-template-columns: repeat(2, 50%);
+    }
+    @include respond-to($vpD) {
+      width: calc(100% - #{$deckgap*3});
+      grid-gap: $deckgap;
+      grid-template-columns: repeat(4, 25%);
+    }
+  }
+  &.deckposts {
+    display: block;
+    &:before {
+      content: "From the blog";
+      display: block;
+      transform-origin: top left;
+      transform: rotate3d(0,0,1,-90deg);
+      position: absolute;
+      left: -20px;
+      top: 125px;
+      width: 125px;
+      padding: 4px;
+      background-color: $cAbernathy;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+    @include respond-to($vpD) {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(3, 33.333%);
+    }
+  }
+}

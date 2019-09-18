@@ -1,0 +1,41 @@
+
+section {
+  position: relative;
+  padding: 15% $bufferSpaceS;
+  background-repeat: repeat;
+  background-position: top center;
+  background-color: #fff;
+  @include respond-to($vpMenu) {
+    padding-left: $bufferSpaceM;
+    padding-right: $bufferSpaceM;
+  }
+  &.texD {
+    background-image: url(../assets/img/texD.png);
+  }
+  &.texT1 {
+    background-image: url(../assets/img/texT1.png);
+  }
+  &.contrastD {
+    background-color: $cStubbs;
+    color: #fff;
+    .heading {
+      color: #fff;
+    }
+  }
+  &.contrastL {
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, $cSizemore, #fff 10%);
+  }
+  &.offset {
+    padding-top: 5em;
+    @include respond-to($vpMenu) {
+      padding-top: 8%;
+    }
+  }
+  &.flat {
+    padding: 0;
+    @include respond-to($vpMenu) {
+      padding: 0;
+    }
+  }
+}

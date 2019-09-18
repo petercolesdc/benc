@@ -1,0 +1,9 @@
+
+.callout {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  .heading, p {
+    display: inline;
+  }
+}

@@ -1,0 +1,12 @@
+
+.row {
+  @include pie-clearfix;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: auto;
+  max-width: $rowMax;
+  &Static {
+    position: static;
+  }
+}
