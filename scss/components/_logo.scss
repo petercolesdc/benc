@@ -1,5 +1,5 @@
 
-$logoDelay: 1s;
+$logoDelay: 3s;
 $logoDuration: 1s;
 
 .logo {
@@ -33,7 +33,7 @@ $logoDuration: 1s;
     animation: anim-logo-change-b;
     animation-duration: $logoDuration/3;
     animation-iteration-count: 1;
-    animation-delay: $logoDelay*1.5;
+    animation-delay: $logoDelay*1.1;
     animation-fill-mode: forwards;
   }
 }

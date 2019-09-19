@@ -1,38 +1,6 @@
-{% set title = '' %}
-{% set section = '' %}
+{% set title = 'Ben Coleman. UX design consultant' %}
+{% set section = 'home' %}
 {% extends 'layouts/default.html' %}
-
-{% set services = {
-    a: {
-      title: "Prototyping",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    },
-    b: {
-      title: "Empathy mapping",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    },
-    c: {
-      title: "Information architecture",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    },
-    d: {
-      title: "Workshops",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    },
-    e: {
-      title: "Wireframing",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    },
-    f: {
-      title: "Visual design",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    },
-    g: {
-      title: "Accessiblity audit",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-    }
-  }
-%}
 
 {% set blogs = {
     a: {
@@ -57,41 +25,7 @@
 {% endblock %}
 
 {% block content %}
-<section>
-  <div class="row">
-    <div class="callout typeXL">
-      <h1 class="heading">UX design &amp; consultancy.</h1>
-      <p>One size doesn’t fit all. That’s why we propose offering multiple apartment types instead of standard, family homes. Whether you’re single, a family of four, a retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr></p>
-    </div>
-  </div>
-</section>
-<section class="contrastD offset texT1">
-  <div class="row">
-    <h2 class="heading typeXXL">Services <b class="amp colorAbernathy">&amp;</b> Skills.</h2>
-    <div class="deck deckby4">
-      {% for key, object in services | dictsort %}
-      <article class="cardS">
-        <main class="cardS_body">
-          <h3 class="cardS_heading typeM">{{ object.title | safe }}</h3>
-          <p>{{ object.copy | safe }}</p>
-        </main>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<section class="flat">
-  <article class="cta">
-    <main>
-      <h2 class="heading typeXXL">Hire me</h2>
-      <p>I currently have availability from <strong>November 2019</strong>. Get in touch to discuss your project needs.</p>
-      <a href="/contact/" class="button">Get in touch</a>
-    </main>
-    <aside>
-      <img src="/assets/img/cal.jpg" alt="Calendar on desk"/>
-    </aside>
-  </article>
-</section>
+{% include 'layouts/cta/hire.html' %}
 <section class="flat">
   <div class="deck deckposts">
     {% for key, object in blogs | dictsort %}

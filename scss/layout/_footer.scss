@@ -1,14 +1,16 @@
 
-$deckgap: 50px;
+$deckgap: 80px;
 
 footer {
   @extend section;
+  background-image: url(../assets/img/texT1.png);
 }
 
 .footer {
   position: relative;
-  background-color: $cWeber;
+  background-color: $cStubbs;
   padding-bottom: 10%;
+  color: #fff;
   .row + .row {
     margin-top: 10em;
   }
@@ -38,35 +40,45 @@ footer {
       }
     }
   }
+  .heading {
+    color: #fff;
+  }
   .heading.typeXS {
     margin-top: 0.175em;
   }
+  .heading.typeM {
+    margin-top: -0.175em;
+  }
   a {
-    color: $cStubbs;
+    color: #fff;
     @include link-active-styles {
       text-decoration-color: $cAbernathy;
     }
   }
+  li, p {
+    font-size: 1.1em;
+  }
+  p {
+    margin-top: 1em;
+  }
   .simple_list {
     margin-top: 1em;
     li {
-      font-size: rem($typeXS);
+      margin-bottom: 0.5em;
       position: relative;
-      margin-bottom: 0.5rem;
-      line-height: 1.8;
-      &:before {
-        content: "";
-        background-image: url(../assets/icons/source/arrowR.svg);
-        background-size: contain;
-        background-position: right top;
-        height: 8px;
-        width: 14px;
-        position: absolute;
-        left: -20px;
-        top: 8px;
-        display: block;
-        z-index: 2;
-      }
+      // &:before {
+      //   content: "";
+      //   background-image: url(../assets/icons/source/arrowR.svg);
+      //   background-size: contain;
+      //   background-position: right top;
+      //   height: 8px;
+      //   width: 14px;
+      //   position: absolute;
+      //   left: -20px;
+      //   top: 8px;
+      //   display: block;
+      //   z-index: 2;
+      // }
     }
   }
 }

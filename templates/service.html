@@ -1,0 +1,103 @@
+{% set title = '' %}
+{% set section = '' %}
+{% extends 'layouts/default.html' %}
+
+{% set services = {
+    a: {
+      title: "Prototyping",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    },
+    b: {
+      title: "Empathy mapping",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    },
+    c: {
+      title: "Information architecture",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    },
+    d: {
+      title: "Workshops",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    },
+    e: {
+      title: "Wireframing",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    },
+    f: {
+      title: "Visual design",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    },
+    g: {
+      title: "Accessiblity audit",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+    }
+  }
+%}
+
+{% set blogs = {
+    a: {
+      title: "How stories shape our choices and create impact",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog1"
+    },
+    b: {
+      title: "The very definition of a Creative Technologist",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog2"
+    },
+    c: {
+      title: "The story of Evidence Based Compliance",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog3"
+    }
+  }
+%}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+<section>
+  <div class="row">
+    <div class="callout typeXL">
+      <h1 class="heading">UX design &amp; consultancy.</h1>
+      <p>One size doesn’t fit all. That’s why we propose offering multiple apartment types instead of standard, family homes. Whether you’re single, a family of four, a retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr></p>
+    </div>
+  </div>
+</section>
+<section class="contrastD offset texT1">
+  <div class="row">
+    <h2 class="heading typeXXL">Services <b class="amp colorAbernathy">&amp;</b> Skills.</h2>
+    <div class="deck deckby4">
+      {% for key, object in services | dictsort %}
+      <article class="cardS">
+        <main class="cardS_body">
+          <h3 class="cardS_heading typeM">{{ object.title | safe }}</h3>
+          <p>{{ object.copy | safe }}</p>
+        </main>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% include 'layouts/cta/hire.html' %}
+<section class="flat">
+  <div class="deck deckposts">
+    {% for key, object in blogs | dictsort %}
+    <a href="" class="cardP" style="background-image: url(../assets/img/{{ object.image }}.jpg);">
+      <main class="cardP_body">
+        <h3 class="cardP_heading typeL">{{ object.title | safe }}</h3>
+        <p>{{ object.copy | safe }}</p>
+      </main>
+      <svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+
+{% block postcontent %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
