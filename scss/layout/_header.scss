@@ -12,6 +12,22 @@
     background-repeat: repeat;
     background-position: top center;
     background-image: url(../assets/img/texT4.png);
+    &:after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: $cAbernathy;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: -10px;
+      z-index: 5;
+      transform-origin: center;
+      transform: rotate3d(0,0,1,45deg);
+    }
     .row + .row {
       margin-top: 5em;
       margin-bottom: 3em;

@@ -3,7 +3,7 @@ $deckgap: 80px;
 
 footer {
   @extend section;
-  background-image: url(../assets/img/texT1.png);
+  background-image: url(../assets/img/texD.png);
 }
 
 .footer {
@@ -51,8 +51,9 @@ footer {
   }
   a {
     color: #fff;
+    text-decoration-color: $cAbernathy;
     @include link-active-styles {
-      text-decoration-color: $cAbernathy;
+      text-decoration-color: $cDelos;
     }
   }
   li, p {

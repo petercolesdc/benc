@@ -10,4 +10,5 @@
     ('Sizemore', $cSizemore),
 	{
   .color#{$name} { color: $color; }
+	.fill#{$name} { background-color: $color; }
 }

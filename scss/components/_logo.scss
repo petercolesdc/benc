@@ -37,3 +37,37 @@ $logoDuration: 1s;
     animation-fill-mode: forwards;
   }
 }
+
+$logogap: 10px;
+
+.logos {
+  position: relative;
+  .button {
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  ul {
+    margin-top: 2em;
+    margin-bottom: 5em;
+    list-style-type: none;
+    display: grid;
+    width: calc(100% - #{$logogap*2});
+    grid-gap: $logogap;
+    grid-template-columns: repeat(2, 50%);
+    @include respond-to($vpMenu) {
+      width: calc(100% - #{$logogap*4});
+      grid-template-columns: repeat(4, 25%);
+    }
+    li {
+      display: block;
+      box-shadow: 0 0 12px rgba(#000, 0.05);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

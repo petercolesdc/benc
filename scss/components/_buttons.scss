@@ -107,6 +107,10 @@ button.button {
       height: 16px;
       width: 16px;
       display: block;
+      &.icon_arrowR_svg {
+        width: 20px;
+        height: 20px;
+      }
     }
     @include link-active-styles {
       svg {
