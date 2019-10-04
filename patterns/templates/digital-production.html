@@ -1,0 +1,88 @@
+{% set title = '' %}
+{% set section = '' %}
+{% extends 'layouts/default.html' %}
+
+{% set services = {
+	a: {
+		title: "Prototyping",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	},
+	b: {
+		title: "Empathy mapping",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	},
+	c: {
+		title: "Information architecture",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	},
+	d: {
+		title: "Workshops",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	},
+	e: {
+		title: "Wireframing",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	},
+	f: {
+		title: "Visual design",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	},
+	g: {
+		title: "Accessiblity audit",
+		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+	}
+	}
+%}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+<section>
+	<div class="row">
+	<div class="callout typeXL">
+		<h1 class="heading">Digital production</h1>
+		<p>I curate teams of specialists to deliver specific projects as the <em>B Team</em>. Think 'pop-up agency' with the best people for the project without having the overheads of a traditional company. I lead teams of researchers, content specialists, designers, developers to deliver projects.</p>
+	</div>
+	</div>
+</section>
+<section class="contrastD offset texT1">
+	<div class="row">
+	<h2 class="heading typeXXL">Services <b class="amp colorAbernathy">&amp;</b> Skills.</h2>
+	<div class="deck deckby4">
+		{% for key, object in services | dictsort %}
+		<article class="cardS">
+		<main class="cardS_body">
+			<h3 class="cardS_heading typeM">{{ object.title | safe }}</h3>
+			<p>{{ object.copy | safe }}</p>
+		</main>
+		</article>
+		{% endfor %}
+	</div>
+	</div>
+</section>
+{% include 'layouts/cta/hire.html' %}
+
+{% if blogs %}
+<section class="flat">
+	<div class="deck deckposts">
+	{% for post in blogs %}
+	<a href="" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
+		<main class="cardP_body">
+		<h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>
+		<p>{{ post.copy | safe }}</p>
+		</main>
+		<svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+	</a>
+	{% endfor %}
+	</div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block postcontent %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}

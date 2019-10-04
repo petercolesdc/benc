@@ -1,11 +1,11 @@
 <header class="header{% if section == 'home' %} headerHome {% endif %}">
-  <div class="row">
-    <h1 class="logo heading"><span>B<b>en Coleman</b></span></h1>
-    {% include 'layouts/navigation/primary.html' %}
-  </div>
-  {% if section == 'home' %}
-  <div class="row">
-    <h2 class="header_strapline">I offer <a href="">UX design consultancy</a>, <a href="">Digital production</a> and <a href="">Design agency support</a>.</h2>
-  </div>
-  {% endif %}
+	<div class="row">
+		<h1 class="logo heading"><span>B<b>en Coleman</b></span></h1>
+		{% include 'layouts/navigation/primary.html' %}
+	</div>
+	{% if section == 'home' %}
+		<div class="row">
+			<h2 class="header_strapline">I offer <a href="/ux-design-consultancy/">UX design consultancy</a>, <a href="/digital-production/">Digital production</a> and <a href="/design-agency-support/">Design agency support</a>.</h2>
+		</div>
+	{% endif %}
 </header>

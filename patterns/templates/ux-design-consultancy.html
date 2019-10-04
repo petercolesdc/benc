@@ -1,0 +1,60 @@
+{% set title = '' %}
+{% set section = '' %}
+{% extends 'layouts/default.html' %}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+<section>
+	<div class="row">
+		<div class="callout typeXL">
+			<h1 class="heading">UX design &amp; consultancy.</h1>
+			<p>One size doesn’t fit all. That’s why we propose offering multiple apartment types instead of standard, family homes. Whether you’re single, a family of four, a retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr></p>
+		</div>
+	</div>
+</section>
+
+{% if services_ux %}
+<section class="contrastD offset texT1">
+	<div class="row">
+		<h2 class="heading typeXXL">Services <b class="amp colorAbernathy">&amp;</b> Skills.</h2>
+		<div class="deck deckby4">
+			{% for service in services_ux %}
+			<article class="cardS">
+				<main class="cardS_body">
+					<h3 class="cardS_heading typeM">{{ service.title | safe }}</h3>
+					<p>{{ service.copy | safe }}</p>
+				</main>
+			</article>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
+
+{% include 'layouts/cta/hire.html' %}
+
+{% if blogs %}
+<section class="flat">
+	<div class="deck deckposts">
+		{% for post in blogs %}
+		<a href="" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
+			<main class="cardP_body">
+				<h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>
+				<p>{{ post.copy | safe }}</p>
+			</main>
+			<svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+		</a>
+		{% endfor %}
+	</div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block postcontent %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
