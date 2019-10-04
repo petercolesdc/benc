@@ -38,7 +38,7 @@
 {% if blogs %}
 <section class="flat">
 	<div class="deck deckposts">
-	{% for post in blogs %}
+	{% for post in blogs.slice(0,3) %}
 	<a href="" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
 		<main class="cardP_body">
 		<h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>

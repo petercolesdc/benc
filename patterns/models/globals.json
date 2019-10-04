@@ -6,18 +6,45 @@
 	"blogs" : [
 		{
 			"title": "How stories shape our choices and create impact",
+			"url": "/journal/how-stories-shape-our-choices-and-create-impact/",
       		"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
       		"image": "tnBlog1"
 		},
 		{
 			"title": "The very definition of a Creative Technologist",
+			"url": "/journal/the-very-definition-of-a-creative-technologist/",
       		"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
       		"image": "tnBlog2"
 		},
 		{
 			"title": "The story of Evidence Based Compliance",
+			"url": "/journal/the-story-of-evidence-based-compliance/",
 	    	"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
 			"image": "tnBlog3"
+		},
+		{
+			"title": "How stories shape our choices and create impact",
+			"url": "/journal/how-stories-shape-our-choices-and-create-impact/",
+      		"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      		"image": "tnBlog1"
+		},
+		{
+			"title": "The very definition of a Creative Technologist",
+			"url": "/journal/the-very-definition-of-a-creative-technologist/",
+      		"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      		"image": "tnBlog2"
+		},
+		{
+			"title": "The story of Evidence Based Compliance",
+			"url": "/journal/the-story-of-evidence-based-compliance/",
+	    	"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+			"image": "tnBlog3"
+		},
+		{
+			"title": "How stories shape our choices and create impact",
+			"url": "/journal/how-stories-shape-our-choices-and-create-impact/",
+      		"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      		"image": "tnBlog1"
 		}
 	],
 	"services_ux" : [

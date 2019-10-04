@@ -1,0 +1,42 @@
+{% set title = 'Journal' %}
+{% set section = 'journal' %}
+{% extends 'layouts/default.html' %}
+
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+<section>
+	<div class="row">
+		<div class="callout typeXL">
+			<h1 class="heading">Journal.</h1>
+			<p>Scribbles mostly.</p>
+		</div>
+	</div>
+</section>
+
+{% if blogs %}
+<section class="flat">
+	<div class="deck deckposts">
+	{% for post in blogs %}
+		<a href="{{ post.url }}" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
+			<main class="cardP_body">
+			<h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>
+			<p>{{ post.copy | safe }}</p>
+			</main>
+			<svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+		</a>
+	{% endfor %}
+	</div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block postcontent %}
+{% include 'layouts/cta/book.html' %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}

@@ -1,73 +1,72 @@
-
 $logoDelay: 3s;
 $logoDuration: 1s;
 
 .logo {
-  @extend .typeXL;
-  position: relative;
-  color: #fff;
-  span {
-    position: relative;
-    z-index: 1;
-  }
-  b {
-    position: relative;
-    animation: anim-logo-change-a;
-    animation-duration: $logoDuration;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: $logoDelay;
-  }
-  &:before {
-    opacity: 0;
-    display: block;
-    position: absolute;
-    background-color: $cStubbs;
-    border-radius: 50%;
-    top: -10px;
-    left: -15px;
-    content: "";
-    height: 46px;
-    width: 46px;
-    z-index: 0;
-    animation: anim-logo-change-b;
-    animation-duration: $logoDuration/3;
-    animation-iteration-count: 1;
-    animation-delay: $logoDelay*1.1;
-    animation-fill-mode: forwards;
-  }
+	@extend .typeXL;
+	position: relative;
+	color: #fff;
+	span {
+		position: relative;
+		z-index: 1;
+	}
+	b {
+		position: relative;
+		animation: anim-logo-change-a;
+		animation-duration: $logoDuration;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+		animation-delay: $logoDelay;
+	}
+	&:before {
+		opacity: 0;
+		display: block;
+		position: absolute;
+		background-color: $cStubbs;
+		border-radius: 50%;
+		top: -10px;
+		left: -15px;
+		content: "";
+		height: 46px;
+		width: 46px;
+		z-index: 0;
+		animation: anim-logo-change-b;
+		animation-duration: $logoDuration/3;
+		animation-iteration-count: 1;
+		animation-delay: $logoDelay*1.1;
+		animation-fill-mode: forwards;
+	}
 }
 
 $logogap: 10px;
 
 .logos {
-  position: relative;
-  .button {
-    width: 210px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  ul {
-    margin-top: 2em;
-    margin-bottom: 5em;
-    list-style-type: none;
-    display: grid;
-    width: calc(100% - #{$logogap*2});
-    grid-gap: $logogap;
-    grid-template-columns: repeat(2, 50%);
-    @include respond-to($vpMenu) {
-      width: calc(100% - #{$logogap*4});
-      grid-template-columns: repeat(4, 25%);
-    }
-    li {
-      display: block;
-      box-shadow: 0 0 12px rgba(#000, 0.05);
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
+	position: relative;
+	.button {
+		width: 210px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	ul {
+		margin-top: 2em;
+		margin-bottom: 5em;
+		list-style-type: none;
+		display: grid;
+		width: calc(100% - #{$logogap*2});
+		grid-gap: $logogap;
+		grid-template-columns: repeat(2, 50%);
+		@include respond-to($vpMenu) {
+			width: calc(100% - #{$logogap*4});
+			grid-template-columns: repeat(4, 25%);
+		}
+		li {
+			display: block;
+			box-shadow: 0 0 12px rgba(#000, 0.05);
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
 }
