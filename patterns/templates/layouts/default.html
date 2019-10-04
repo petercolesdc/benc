@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  {% include 'layouts/scaffold/head.html' %}
+	{% include 'layouts/scaffold/head.html' %}
 </head>
 
 <body>
@@ -30,32 +30,32 @@
 
 <script>
 $(function() {
-  $('a').each(function() { /* [1] */
-     if ( location.hostname === this.hostname || !this.hostname.length ) { /* [1] */
-        var link = $(this).attr("href"); /* [2] */
-        if ( link.match("^#") ) { /* [3] */
-          $(this).click(function() {
-              var target = $(link); /* [4] */
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']'); /* [4] */
-              if (target.length) {
-                  $('html,body').animate({ /* [5] */
-                      scrollTop: target.offset().top - 70 /* [5] */
-                  }, 1000); return false; /* [5] */
-              }
-          });
-        } else if ( link.match("^mailto") ) { /* [6] */
-            // Act as normal  /* [6] */
-        } else {
-          $(this).click(function(e) {
-              e.preventDefault(); /* [7] */
-              $('html').addClass('fadeSiteOut'); /* [8] */
-              setTimeout(function() { /* [9] */
-                  window.location = link; /* [9] */
-              }, 500); /* [9] */
-          });
-	      }
-      }
-  });
+	$('a').each(function() { /* [1] */
+		 if ( location.hostname === this.hostname || !this.hostname.length ) { /* [1] */
+			var link = $(this).attr("href"); /* [2] */
+			if ( link.match("^#") ) { /* [3] */
+				$(this).click(function() {
+					var target = $(link); /* [4] */
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']'); /* [4] */
+					if (target.length) {
+						$('html,body').animate({ /* [5] */
+								scrollTop: target.offset().top - 70 /* [5] */
+						}, 1000); return false; /* [5] */
+					}
+				});
+			} else if ( link.match("^mailto") ) { /* [6] */
+				// Act as normal  /* [6] */
+			} else {
+				$(this).click(function(e) {
+					e.preventDefault(); /* [7] */
+					$('html').addClass('fadeSiteOut'); /* [8] */
+					setTimeout(function() { /* [9] */
+						window.location = link; /* [9] */
+					}, 500); /* [9] */
+				});
+			}
+		}
+	});
 });
 </script>
 {% block script %}

@@ -2,38 +2,6 @@
 {% set section = '' %}
 {% extends 'layouts/default.html' %}
 
-{% set services = {
-	a: {
-		title: "Prototyping",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	},
-	b: {
-		title: "Empathy mapping",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	},
-	c: {
-		title: "Information architecture",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	},
-	d: {
-		title: "Workshops",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	},
-	e: {
-		title: "Wireframing",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	},
-	f: {
-		title: "Visual design",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	},
-	g: {
-		title: "Accessiblity audit",
-		copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
-	}
-	}
-%}
-
 {% block precontent %}
 {% endblock %}
 
@@ -46,21 +14,25 @@
 	</div>
 	</div>
 </section>
+
+{% if services_production %}
 <section class="contrastD offset texT1">
 	<div class="row">
-	<h2 class="heading typeXXL">Services <b class="amp colorAbernathy">&amp;</b> Skills.</h2>
-	<div class="deck deckby4">
-		{% for key, object in services | dictsort %}
-		<article class="cardS">
-		<main class="cardS_body">
-			<h3 class="cardS_heading typeM">{{ object.title | safe }}</h3>
-			<p>{{ object.copy | safe }}</p>
-		</main>
-		</article>
-		{% endfor %}
-	</div>
+		<h2 class="heading typeXXL">Services <b class="amp colorAbernathy">&amp;</b> Skills.</h2>
+		<div class="deck deckby4">
+			{% for service in services_production %}
+			<article class="cardS">
+				<main class="cardS_body">
+					<h3 class="cardS_heading typeM">{{ service.title | safe }}</h3>
+					<p>{{ service.copy | safe }}</p>
+				</main>
+			</article>
+			{% endfor %}
+		</div>
 	</div>
 </section>
+{% endif %}
+
 {% include 'layouts/cta/hire.html' %}
 
 {% if blogs %}

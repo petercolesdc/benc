@@ -49,5 +49,33 @@
 			"title": "Accessiblity audit",
 			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
 		}
+	],
+	"services_production" : [
+		{
+			"title": "De-centralised teams",
+			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+		},
+		{
+			"title": "Best people for the project",
+			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+		},
+		{
+			"title": "All experts",
+			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+		}
+	],
+	"services_support" : [
+		{
+			"title": "You have no idea what you are doing",
+			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+		},
+		{
+			"title": "I wont tell anyone that though",
+			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+		},
+		{
+			"title": "Unless you refuse to pay me $1,000,000",
+			"copy": "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>"
+		}
 	]
 }

@@ -2,57 +2,42 @@
 {% set section = 'home' %}
 {% extends 'layouts/default.html' %}
 
-{% set blogs = {
-    a: {
-      title: "How stories shape our choices and create impact",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
-      image: "tnBlog1"
-    },
-    b: {
-      title: "The very definition of a Creative Technologist",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
-      image: "tnBlog2"
-    },
-    c: {
-      title: "The story of Evidence Based Compliance",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
-      image: "tnBlog3"
-    }
-  }
-%}
-
 {% block precontent %}
 {% endblock %}
 
 {% block content %}
 <section class="offset texT5 logoblock">
-  <div class="row">
-    <div class="logos">
-      <h2 class="heading typeXXL">For folks like</h2>
-      <ul>
-        <li><img src="/assets/img/logo1.png" alt="logo"/></li>
-        <li><img src="/assets/img/logo2.png" alt="logo"/></li>
-        <li><img src="/assets/img/logo3.png" alt="logo"/></li>
-        <li><img src="/assets/img/logo4.png" alt="logo"/></li>
-      </ul>
-      <a href="" class="button">View a case study</a>
-    </div>
-  </div>
+	<div class="row">
+		<div class="logos">
+			<h2 class="heading typeXXL">For folks like</h2>
+			<ul>
+				<li><img src="/assets/img/logo1.png" alt="logo"/></li>
+				<li><img src="/assets/img/logo2.png" alt="logo"/></li>
+				<li><img src="/assets/img/logo3.png" alt="logo"/></li>
+				<li><img src="/assets/img/logo4.png" alt="logo"/></li>
+			</ul>
+			<a href="" class="button">View a case study</a>
+		</div>
+	</div>
 </section>
 {% include 'layouts/cta/hire.html' %}
+
+{% if blogs %}
 <section class="flat">
-  <div class="deck deckposts">
-    {% for key, object in blogs | dictsort %}
-    <a href="" class="cardP" style="background-image: url(../assets/img/{{ object.image }}.jpg);">
-      <main class="cardP_body">
-        <h3 class="cardP_heading typeL">{{ object.title | safe }}</h3>
-        <p>{{ object.copy | safe }}</p>
-      </main>
-      <svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
-    </a>
-    {% endfor %}
-  </div>
+	<div class="deck deckposts">
+	{% for post in blogs %}
+	<a href="" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
+		<main class="cardP_body">
+		<h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>
+		<p>{{ post.copy | safe }}</p>
+		</main>
+		<svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+	</a>
+	{% endfor %}
+	</div>
 </section>
+{% endif %}
+
 {% endblock %}
 
 {% block postcontent %}
