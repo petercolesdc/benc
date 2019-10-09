@@ -6,6 +6,10 @@ $logoDuration: 1s;
   @extend .typeXL;
   position: relative;
   color: #fff;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
   span {
     position: relative;
     z-index: 1;
@@ -53,12 +57,13 @@ $logogap: 10px;
     margin-bottom: 5em;
     list-style-type: none;
     display: grid;
-    width: calc(100% - #{$logogap*2});
+    width: calc(100% - #{$logogap});
     grid-gap: $logogap;
     grid-template-columns: repeat(2, 50%);
     @include respond-to($vpMenu) {
-      width: calc(100% - #{$logogap*4});
+      width: calc(100% - #{$logogap*3});
       grid-template-columns: repeat(4, 25%);
+      margin-bottom: 1em;
     }
     li {
       display: block;
@@ -68,6 +73,7 @@ $logogap: 10px;
       display: block;
       width: 100%;
       height: auto;
+      background-color: #fff;
     }
   }
 }

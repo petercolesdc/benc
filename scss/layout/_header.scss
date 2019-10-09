@@ -39,7 +39,7 @@
     .header_strapline {
       font-size: 8vw;
       line-height: 1.3;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.035em;
       @extend .heading;
       color: rgba(#fff, 0.6);
       @include respond-to($vpMenu) {

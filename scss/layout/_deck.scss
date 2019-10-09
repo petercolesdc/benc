@@ -41,4 +41,12 @@ $deckgap: 50px;
       grid-template-columns: repeat(3, 33.333%);
     }
   }
+  &.deckblog {
+    display: block;
+    @include respond-to($vpD) {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(3, 33.333%);
+    }
+  }
 }

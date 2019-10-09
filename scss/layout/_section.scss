@@ -64,8 +64,42 @@ section {
   &.logoblock {
     border-bottom: 1px solid darken($cSizemore, 5%);
     .heading {
-      text-align: center;
       margin-bottom: 1em;
+    }
+    .button {
+      @include respond-to($vpMenu) {
+        position: absolute;
+        top: -2px;
+        right: 0;
+        font-size: rem($typeS);
+        background-color: transparent;
+        text-align: right;
+        color: $cAction;
+        text-decoration: underline;
+        line-height: auto;
+        padding: 0;
+        border: none;
+        text-decoration-color: $cHeading;
+        transition: none;
+        @include link-active-styles {
+          border: none;
+          text-decoration-color: $cAction;
+          text-decoration: underline;
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  // Blog
+  // -------------------------------------------
+  &.blog {
+    > h1 {
+      font-size: 12.5vw;
+      line-height: 1.3;
+      padding: 1em 0;
+      text-align: center;
     }
   }
 }

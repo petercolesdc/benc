@@ -46,8 +46,12 @@
         color: #fff;
         @include link-active-styles {
           text-decoration: underline;
-          text-decoration-color: $cDelos;
+          text-decoration-color: $cHeading;
         }
+      }
+      &.current a {
+        text-decoration: underline;
+        text-decoration-color: $cHeading;
       }
     }
   }
