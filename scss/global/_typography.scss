@@ -181,6 +181,9 @@
 		margin-top: rem($typeDefault);
 		display: block;
 	}
+	> p:first-of-type {
+		font-size: rem($typeXL);
+	}
 	ul,
 	ol {
 		@extend %textList;
@@ -203,6 +206,8 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		@extend .heading;

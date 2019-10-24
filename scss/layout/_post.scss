@@ -1,0 +1,45 @@
+
+.post {
+  padding: $bufferSpaceM 0;
+  max-width: $vpD;
+  margin-left: auto;
+  margin-right: auto;
+  header {
+    padding: 0 $bufferSpaceM;
+    h1 {
+      @extend .heading;
+      font-size: rem($typeXXL);
+      line-height: 1.4;
+    }
+  }
+  main {
+    z-index: 2;
+    position: relative;
+    padding: 8em 10em;
+    background-color: #fff;
+  }
+}
+
+.postdate {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.postimage {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  margin: $bufferSpaceM -18vw -14em -9vw;
+  max-height: 500px;
+  min-height: 400px;
+  height: auto;
+  background-position: center 65%;
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
