@@ -182,7 +182,9 @@
 		display: block;
 	}
 	> p:first-of-type {
-		font-size: rem($typeXL);
+		@include respond-to($vpC) {
+			font-size: rem($typeXL);
+		}
 	}
 	ul,
 	ol {
@@ -214,10 +216,10 @@
 		position: relative;
 		margin-top: rem($typeDefault*4);
 	}
-	h1,h2 {
+	h1 {
 		@extend .typeXXL;
 	}
-	h3 {
+	h2, h3 {
 		@extend .typeXL;
 	}
 	h4 {

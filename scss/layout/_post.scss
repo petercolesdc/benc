@@ -8,15 +8,21 @@
     padding: 0 $bufferSpaceM;
     h1 {
       @extend .heading;
-      font-size: rem($typeXXL);
+      font-size: rem($typeXL);
       line-height: 1.4;
+      @include respond-to($vpC) {
+        font-size: rem($typeXXL);
+      }
     }
   }
   main {
     z-index: 2;
     position: relative;
-    padding: 8em 10em;
+    padding: 6em 4em;
     background-color: #fff;
+    @include respond-to($vpC) {
+      padding: 8em 10em;
+    }
   }
 }
 
