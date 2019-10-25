@@ -50,6 +50,10 @@
 					text-decoration-color: $cDelos;
 				}
 			}
+			&.current a {
+				text-decoration: underline;
+				text-decoration-color: $cHeading;
+			}
 		}
 	}
 }

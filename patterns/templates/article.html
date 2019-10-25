@@ -1,0 +1,87 @@
+{% set title = '' %}
+{% set section = 'journal' %}
+{% extends 'layouts/default.html' %}
+
+{% set blogs = {
+    a: {
+      title: "How stories shape our choices and create impact",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog1"
+    },
+    b: {
+      title: "The very definition of a Creative Technologist",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog2"
+    },
+    c: {
+      title: "The story of Evidence Based Compliance",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog3"
+    }
+  }
+%}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+<section class="flat">
+  <div class="row">
+    <div class="article">
+      <article class="post">
+        <header>
+          <span class="postdate">Oct 21 2019</span>
+          <h1>Why do Data Scientists Need DevOps for Machine Learning (MLOps)?</h1>
+          <div class="postimage">
+            <img src="../assets/img/blogFocus.jpg" alt="">
+          </div>
+        </header>
+        <main class="typebase">
+          <p>Many business leaders are investing significant resources in machine learning (ML) solutions to help them generate insights about their businesses from vast amounts of data, and to improve their business results.</p>
+          <p>Although businesses can vary significantly in the goals and needs that they set for their ML teams, we see the same challenges occurring across most companies.</p>
+          <img src="https://source.unsplash.com/random/800x500" alt="">
+          <p>One of these challenges is how to achieve effective collaboration between and among two different types of team members that are typically involved in such projects: data scientists and data engineers.</p>
+          <p>Although both data scientists and data engineers work with data there are differences between them in terms of their skills, educational background, responsibilities, tools used and goals.</p>
+          <h2>Data scientists</h2>
+          <p>Data scientists work with large amounts of data (both structured and unstructured), applying their knowledge of statistics, programming and other disciplines to extract insights from data to help their companies improve their business decisions, services or products. The educational background of data scientists is most often Mathematics and Statistics, followed by Computer Science and Engineering. They usually have many responsibilities:</p>
+          <ul>
+            <li>Collecting and processing data, and extracting trends, patterns and other valuable insights using statistical analysis and models</li>
+            <li>Working with stakeholders to identify opportunities for exploiting company data to drive better business decisions and new products</li>
+            <li>Training and deploying machine learning models into production with help from data engineers, business analysts and software developers</li>
+            <li>Identifying the relevance and accuracy of various data sets</li>
+            <li>Presenting data science results and statistical insights to key decision makers across the business</li>
+          </ul>
+          <h3>Data engineers</h3>
+          <p>Data scientists work with large amounts of data (both structured and unstructured), applying their knowledge of statistics, programming and other disciplines to extract insights from data to help their companies improve their business decisions, services or products. The educational background of data scientists is most often Mathematics and Statistics, followed by Computer Science and Engineering. They usually have many responsibilities:</p>
+          <ol>
+            <li>Collecting and processing data, and extracting trends, patterns and other valuable insights using statistical analysis and models</li>
+            <li>Working with stakeholders to identify opportunities for exploiting company data to drive better business decisions and new products</li>
+            <li>Training and deploying machine learning models into production with help from data engineers, business analysts and software developers</li>
+            <li>Identifying the relevance and accuracy of various data sets</li>
+            <li>Presenting data science results and statistical insights to key decision makers across the business</li>
+          </ol>
+        </main>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="flat">
+  <div class="deck deckposts">
+    {% for key, object in blogs | dictsort %}
+    <a href="" class="cardP" style="background-image: url(../assets/img/{{ object.image }}.jpg);">
+      <main class="cardP_body">
+        <h3 class="cardP_heading typeL">{{ object.title | safe }}</h3>
+        <p>{{ object.copy | safe }}</p>
+      </main>
+      <svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+
+{% block postcontent %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}

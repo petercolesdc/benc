@@ -1,0 +1,33 @@
+
+.paging {
+  @extend .row;
+  padding: 6em 0;
+  background-color: $cStubbs;
+  background-repeat: repeat;
+  background-position: top center;
+  //background-size: auto 10%;
+  background-image: url(../assets/img/texTD.png);
+  ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  li {
+    display: inline-block;
+    font-size: rem($typeS);
+    line-height: 1;
+    margin-left: 1em;
+    margin-right: 1em;
+    &.current a {
+      color: $cDelos;
+    }
+  }
+  a {
+    font-size: inherit;
+    color: darken($cSizemore, 30%);
+    text-decoration: none;
+    @include link-active-styles {
+      color: $cDelos;
+    }
+  }
+}

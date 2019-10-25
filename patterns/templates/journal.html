@@ -2,40 +2,88 @@
 {% set section = 'journal' %}
 {% extends 'layouts/default.html' %}
 
+{% set blogs = {
+    a: {
+      title: "How stories shape our choices and create impact",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog1"
+    },
+    b: {
+      title: "The very definition of a Creative Technologist",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog2"
+    },
+    c: {
+      title: "The story of Evidence Based Compliance",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog3"
+    },
+    d: {
+      title: "How stories shape our choices and create impact",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog1"
+    },
+    e: {
+      title: "The very definition of a Creative Technologist",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog2"
+    },
+    f: {
+      title: "The story of Evidence Based Compliance",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog3"
+    },
+    g: {
+      title: "How stories shape our choices and create impact",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog1"
+    },
+    h: {
+      title: "The very definition of a Creative Technologist",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog2"
+    },
+    i: {
+      title: "The story of Evidence Based Compliance",
+      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
+      image: "tnBlog3"
+    }
+  }
+%}
 
 {% block precontent %}
 {% endblock %}
 
 {% block content %}
-<section>
-	<div class="row">
-		<div class="callout typeXL">
-			<h1 class="heading">Journal.</h1>
-			<p>Scribbles mostly.</p>
-		</div>
-	</div>
+<section class="flat blog">
+  <h1 class="heading">Journal.</h1>
+  <div class="deck deckblog">
+    {% for key, object in blogs | dictsort %}
+    <a href="" class="cardP" style="background-image: url(../assets/img/{{ object.image }}.jpg);">
+      <main class="cardP_body">
+        <h3 class="cardP_heading typeL">{{ object.title | safe }}</h3>
+        <p>{{ object.copy | safe }}</p>
+      </main>
+      <svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="paging">
+    <ul>
+      <li><a href="">Last</a></li>
+      <li class="current"><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">First</a></li>
+    </ul>
+  </div>
 </section>
-
-{% if blogs %}
-<section class="flat">
-	<div class="deck deckposts">
-	{% for post in blogs %}
-		<a href="{{ post.url }}" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
-			<main class="cardP_body">
-			<h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>
-			<p>{{ post.copy | safe }}</p>
-			</main>
-			<svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
-		</a>
-	{% endfor %}
-	</div>
-</section>
-{% endif %}
+{% include 'layouts/cta/hire.html' %}
 
 {% endblock %}
 
 {% block postcontent %}
-{% include 'layouts/cta/book.html' %}
 {% endblock %}
 
 {% block script %}

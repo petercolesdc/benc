@@ -3,13 +3,14 @@ $deckgap: 80px;
 
 footer {
   @extend section;
-  background-image: url(../assets/img/texD.png);
+  background-image: url(../assets/img/texT1.png);
 }
 
 .footer {
   position: relative;
   background-color: $cStubbs;
-  padding-bottom: 10%;
+  padding-bottom: 6em;
+  padding-top: 10em;
   color: #fff;
   .row + .row {
     margin-top: 10em;
@@ -42,12 +43,15 @@ footer {
   }
   .heading {
     color: #fff;
+    font-family: $fontVoice;
   }
   .heading.typeXS {
     margin-top: 0.175em;
+    font-family: $fontBrand;
   }
   .heading.typeM {
     margin-top: -0.175em;
+    font-family: $fontBrand;
   }
   a {
     color: #fff;
@@ -65,21 +69,34 @@ footer {
   .simple_list {
     margin-top: 1em;
     li {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.75em;
       position: relative;
-      // &:before {
-      //   content: "";
-      //   background-image: url(../assets/icons/source/arrowR.svg);
-      //   background-size: contain;
-      //   background-position: right top;
-      //   height: 8px;
-      //   width: 14px;
-      //   position: absolute;
-      //   left: -20px;
-      //   top: 8px;
-      //   display: block;
-      //   z-index: 2;
-      // }
+    }
+  }
+  &_toes {
+    position: relative;
+    p {
+      width: 65%;
+      color: $cWeber;
+    }
+    &__icon {
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      &:nth-of-type(2) {
+        margin-right: 30px;
+      }
+      svg {
+        width: 14px;
+        height: 14px;
+        display: block;
+        &.icon_twitter_svg {
+          margin-top: 1px;
+        }
+      }
     }
   }
 }
