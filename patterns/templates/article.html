@@ -2,25 +2,6 @@
 {% set section = 'journal' %}
 {% extends 'layouts/default.html' %}
 
-{% set blogs = {
-    a: {
-      title: "How stories shape our choices and create impact",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
-      image: "tnBlog1"
-    },
-    b: {
-      title: "The very definition of a Creative Technologist",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
-      image: "tnBlog2"
-    },
-    c: {
-      title: "The story of Evidence Based Compliance",
-      copy: "A retired couple or a group of students, you have options. And if life happens and you need a different <nobr>living space.</nobr>",
-      image: "tnBlog3"
-    }
-  }
-%}
-
 {% block precontent %}
 {% endblock %}
 
@@ -65,19 +46,23 @@
     </div>
   </div>
 </section>
+
+{% if blogs %}
 <section class="flat">
   <div class="deck deckposts">
-    {% for key, object in blogs | dictsort %}
-    <a href="" class="cardP" style="background-image: url(../assets/img/{{ object.image }}.jpg);">
-      <main class="cardP_body">
-        <h3 class="cardP_heading typeL">{{ object.title | safe }}</h3>
-        <p>{{ object.copy | safe }}</p>
-      </main>
-      <svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
-    </a>
-    {% endfor %}
+  {% for post in blogs.slice(0,3) %}
+  <a href="" class="cardP" style="background-image: url(../assets/img/{{ post.image }}.jpg);">
+    <main class="cardP_body">
+    <h3 class="cardP_heading typeL">{{ post.title | safe }}</h3>
+    <p>{{ post.copy | safe }}</p>
+    </main>
+    <svg class="icon_arrowR_svg"><use xlink:href="/assets/icons/renders/sprite.svg#arrowR"></use></svg>
+  </a>
+  {% endfor %}
   </div>
 </section>
+{% endif %}
+
 {% endblock %}
 
 {% block postcontent %}
